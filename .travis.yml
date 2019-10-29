@@ -1,4 +1,6 @@
-sudo: false
+sudo: required
+
+dist: bionic
 
 language: python
 
@@ -6,6 +8,7 @@ python:
     - "3.6"
 
 install:
+    - sudo apt-get install -y ffmpeg
     - pip install pandas scipy matplotlib
     - cd gym102919
     - pip install -e '.[atari]'
