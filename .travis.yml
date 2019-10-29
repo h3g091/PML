@@ -8,7 +8,7 @@ python:
 install:
     - pip install pandas scipy matplotlib
     - cd gym102919
-    - pip install -e .
+    - pip install -e '.[atari]'
     - cd ..
 
 jobs:
