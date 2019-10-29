@@ -1,0 +1,19 @@
+sudo: false
+
+language: python
+
+python:
+    - "3.6"
+
+install:
+    - pip install pandas scipy matplotlib
+    - cd gym
+    - pip install -e .
+    - cd ..
+
+jobs:
+    include:
+        - stage: test
+          name: "Unit Tests"
+          script:
+              - python test.py
