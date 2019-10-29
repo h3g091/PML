@@ -7,7 +7,7 @@ python:
 
 install:
     - pip install pandas scipy matplotlib
-    - cd gym
+    - cd gym102919
     - pip install -e .
     - cd ..
 
